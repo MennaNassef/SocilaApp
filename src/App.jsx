@@ -19,7 +19,7 @@ import Setting from './components/Setting';
 const router = createBrowserRouter([
     {
       path: '', element: <MainLayout />, children: [
-        { index:true , element: <ProtectedRoute><Feed/> </ProtectedRoute> },
+        { path:'SocilaApp' , element: <ProtectedRoute><Feed/> </ProtectedRoute> },
         { path: 'profile', element: <ProtectedRoute><Profile/> </ProtectedRoute> },
         { path: 'setting', element: <ProtectedRoute><Setting/> </ProtectedRoute> },
         { path: 'posts/:postId', element: <ProtectedRoute><PostDetails/> </ProtectedRoute> },
@@ -27,7 +27,7 @@ const router = createBrowserRouter([
       ]
     }, 
     {
-      path: '', element: <AuthLayout />, children: [
+      path:'', element: <AuthLayout />, children: [
         { path: 'signin', element:<ProtectedAuthRoute><SignIn /></ProtectedAuthRoute>  },
         { path: 'signup', element:<ProtectedAuthRoute><SignUp /> </ProtectedAuthRoute> },
       ]

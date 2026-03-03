@@ -28,7 +28,7 @@ export default function Navbar() {
   return (
     <HeroUiNavbar>
       <NavbarBrand>
-        <Link to={"setting"} className="flex gap-3 items-center">
+        <Link to={"/"} className="flex gap-3 items-center">
           <div className="w-10 h-10 rounded-md overflow-hidden">
             <img src={route} alt="" className="w-full" />
           </div>
